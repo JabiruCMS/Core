@@ -15,6 +15,7 @@ use Modules\Core\Console\DownloadModuleCommand;
 use Modules\Core\Console\InstallCommand;
 use Modules\Core\Console\PublishModuleAssetsCommand;
 use Modules\Core\Console\PublishThemeAssetsCommand;
+use Modules\Core\Console\SimpleInstallCommand;
 use Modules\Core\Events\BuildingSidebar;
 use Modules\Core\Events\EditorIsRendering;
 use Modules\Core\Events\Handlers\RegisterCoreSidebar;
@@ -131,6 +132,7 @@ class CoreServiceProvider extends ServiceProvider
     {
         $this->commands([
             InstallCommand::class,
+            SimpleInstallCommand::class,
             PublishThemeAssetsCommand::class,
             PublishModuleAssetsCommand::class,
             DownloadModuleCommand::class,
