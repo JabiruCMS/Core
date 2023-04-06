@@ -4,6 +4,7 @@ namespace Modules\Core\Repositories\Eloquent;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Bocian\Support\EloquentRepositoryHelper;
 use Modules\Core\Repositories\BaseRepository;
 
 /**
@@ -13,6 +14,8 @@ use Modules\Core\Repositories\BaseRepository;
  */
 abstract class EloquentBaseRepository implements BaseRepository
 {
+    use EloquentRepositoryHelper;
+
     /**
      * @var \Illuminate\Database\Eloquent\Model An instance of the Eloquent Model
      */
