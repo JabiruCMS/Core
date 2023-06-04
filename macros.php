@@ -224,7 +224,7 @@ Form::macro('normalInput', function ($name, $title, ViewErrorBag $errors, $objec
     $string .= Form::label($name, $title);
 
     if (is_object($object)) {
-        $currentData = isset($object->{$name}) ? $object->{$name} : '';
+        $currentData = $object?->{$name};
     } else {
         $currentData = null;
     }
