@@ -106,6 +106,14 @@ abstract class EloquentBaseRepository implements BaseRepository
     /**
      * @inheritdoc
      */
+    public function delete(Model $model)
+    {
+        return $model->delete();
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function allTranslatedIn($lang)
     {
         return $this->model->whereHas('translations', function (Builder $q) use ($lang) {
