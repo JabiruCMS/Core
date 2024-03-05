@@ -49,7 +49,7 @@
             },
             instanceReadyCallback: {
                 type: Function,
-                default: '',
+                default: () => false,
             },
             readOnlyMode: {
                 type: Boolean,
