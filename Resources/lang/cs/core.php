@@ -36,6 +36,7 @@ return [
         'delete' => 'Smazat',
         'reset' => 'Resetovat',
         'see' => 'Zobrazit',
+        'close' => 'Zavřít',
         'visualize' => 'Vizualizovat',
         'update and back' => 'Aktualizovat a vrátit se zpět',
     ],

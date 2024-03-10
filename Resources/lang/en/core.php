@@ -36,6 +36,7 @@ return [
         'delete' => 'Delete',
         'reset' => 'Reset',
         'see' => 'See',
+        'close' => 'Close',
         'visualize' => 'Visualize',
         'update and back' => 'Update and go back',
     ],
