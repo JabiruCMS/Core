@@ -1,6 +1,6 @@
 export default {
     methods: {
-        trans(string) {
+        trans(string, replacements = {}) {
             // Makes a string: core.button.cancel | core.button.created at
             // to: core["button.cancel"] | core["button.created at"]
             const array = string.split('.');
@@ -12,7 +12,13 @@ export default {
             const first = array.splice(0, 1),
                 key = array.join('.');
 
-            return this.$t(`${first}['${key}']`);
+            let translatedMessage = this.$t(`${first}['${key}']`);
+
+            for (const key in replacements) {
+                translatedMessage = translatedMessage.replace(`:${key}`, replacements[key]);
+            }
+
+            return translatedMessage;
         },
     },
 };
