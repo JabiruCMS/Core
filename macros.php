@@ -313,7 +313,7 @@ Form::macro('normalCheckbox', function ($name, $title, ViewErrorBag $errors, $ob
     $string .= "<input id='$name' name='$name' type='checkbox' class='flat-blue'";
 
     if (is_object($object)) {
-        $currentData = isset($object->$name) && (bool)$object->$name ? 'checked' : '';
+        $currentData = (bool)($object->$name) ? 'checked' : '';
     } else {
         $currentData = false;
     }
